@@ -1,10 +1,10 @@
 <?php
 
-namespace JMGQ\AStar\Tests\Example\Terrain;
+namespace AStar\Tests\Example\Terrain;
 
-use JMGQ\AStar\Example\Terrain\MyAStar;
-use JMGQ\AStar\Example\Terrain\MyNode;
-use JMGQ\AStar\Example\Terrain\TerrainCost;
+use AStar\Example\Terrain\MyAStar;
+use AStar\Example\Terrain\MyNode;
+use AStar\Example\Terrain\TerrainCost;
 
 class MyAStarTest extends \PHPUnit_Framework_TestCase
 {

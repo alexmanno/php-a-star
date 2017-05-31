@@ -1,8 +1,8 @@
 <?php
 
-namespace JMGQ\AStar\Tests;
+namespace AStar\Tests;
 
-use JMGQ\AStar\NodeList;
+use AStar\NodeList;
 
 class NodeListTest extends \PHPUnit_Framework_TestCase
 {
@@ -26,12 +26,12 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldAddNodes()
     {
-        $node1 = $this->getMock('JMGQ\AStar\Node');
+        $node1 = $this->getMock('AStar\Node');
         $node1->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('ID1'));
 
-        $node2 = $this->getMock('JMGQ\AStar\Node');
+        $node2 = $this->getMock('AStar\Node');
         $node2->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('ID2'));
@@ -51,7 +51,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldDetermineIfItIsEmptyOrNot()
     {
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
 
         $this->assertTrue($this->sut->isEmpty());
 
@@ -64,12 +64,12 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
     {
         $uniqueID = 'someUniqueID';
 
-        $node1 = $this->getMock('JMGQ\AStar\Node');
+        $node1 = $this->getMock('AStar\Node');
         $node1->expects($this->any())
             ->method('getID')
             ->will($this->returnValue($uniqueID));
 
-        $node2 = $this->getMock('JMGQ\AStar\Node');
+        $node2 = $this->getMock('AStar\Node');
         $node2->expects($this->any())
             ->method('getID')
             ->will($this->returnValue($uniqueID));
@@ -89,7 +89,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldCheckIfItContainsANode()
     {
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('someUniqueID'));
@@ -103,7 +103,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldExtractBestNode()
     {
-        $bestNode = $this->getMock('JMGQ\AStar\Node');
+        $bestNode = $this->getMock('AStar\Node');
         $bestNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('bestNode'));
@@ -111,7 +111,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
             ->method('getF')
             ->will($this->returnValue(1));
 
-        $mediumNode = $this->getMock('JMGQ\AStar\Node');
+        $mediumNode = $this->getMock('AStar\Node');
         $mediumNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('mediumNode'));
@@ -119,7 +119,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
             ->method('getF')
             ->will($this->returnValue(3));
 
-        $worstNode = $this->getMock('JMGQ\AStar\Node');
+        $worstNode = $this->getMock('AStar\Node');
         $worstNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('worstNode'));
@@ -142,12 +142,12 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldRemoveNode()
     {
-        $nodeToBeRemoved = $this->getMock('JMGQ\AStar\Node');
+        $nodeToBeRemoved = $this->getMock('AStar\Node');
         $nodeToBeRemoved->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('nodeToBeRemoved'));
 
-        $nodeToBeKept = $this->getMock('JMGQ\AStar\Node');
+        $nodeToBeKept = $this->getMock('AStar\Node');
         $nodeToBeKept->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('nodeToBeKept'));
@@ -166,7 +166,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldGetNode()
     {
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('someUniqueID'));
@@ -178,7 +178,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldGetNullIfNodeNotFound()
     {
-        $nonExistentNode = $this->getMock('JMGQ\AStar\Node');
+        $nonExistentNode = $this->getMock('AStar\Node');
         $nonExistentNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('someUniqueID'));
@@ -188,7 +188,7 @@ class NodeListTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldEmptyTheList()
     {
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('someUniqueID'));

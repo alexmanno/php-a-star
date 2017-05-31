@@ -1,8 +1,8 @@
 <?php
 
-namespace JMGQ\AStar\Tests;
+namespace AStar\Tests;
 
-use JMGQ\AStar\AbstractNode;
+use AStar\AbstractNode;
 
 class AbstractNodeTest extends \PHPUnit_Framework_TestCase
 {
@@ -36,7 +36,7 @@ class AbstractNodeTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->sut = $this->getMockForAbstractClass('JMGQ\AStar\AbstractNode');
+        $this->sut = $this->getMockForAbstractClass('AStar\AbstractNode');
     }
 
     public function testShouldHaveNoParentInitially()
@@ -46,7 +46,7 @@ class AbstractNodeTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldSetParent()
     {
-        $parent = $this->getMock('JMGQ\AStar\Node');
+        $parent = $this->getMock('AStar\Node');
 
         $this->assertNull($this->sut->getParent());
 
@@ -62,7 +62,7 @@ class AbstractNodeTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldAddChild()
     {
-        $child = $this->getMock('JMGQ\AStar\Node');
+        $child = $this->getMock('AStar\Node');
 
         $this->assertCount(0, $this->sut->getChildren());
 
@@ -73,7 +73,7 @@ class AbstractNodeTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldSetItselfAsTheParentOfItsChildren()
     {
-        $child = $this->getMockForAbstractClass('JMGQ\AStar\AbstractNode');
+        $child = $this->getMockForAbstractClass('AStar\AbstractNode');
 
         $this->assertNull($child->getParent());
 

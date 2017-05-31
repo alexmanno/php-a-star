@@ -1,11 +1,11 @@
 <?php
 
-namespace JMGQ\AStar\Tests\Example\Graph;
+namespace AStar\Tests\Example\Graph;
 
-use JMGQ\AStar\Example\Graph\Graph;
-use JMGQ\AStar\Example\Graph\Link;
-use JMGQ\AStar\Example\Graph\MyAStar;
-use JMGQ\AStar\Example\Graph\MyNode;
+use AStar\Example\Graph\Graph;
+use AStar\Example\Graph\Link;
+use AStar\Example\Graph\MyAStar;
+use AStar\Example\Graph\MyNode;
 
 class MyAStarTest extends \PHPUnit_Framework_TestCase
 {

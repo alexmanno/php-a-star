@@ -1,8 +1,8 @@
 <?php
 
-namespace JMGQ\AStar\Tests\Example\Graph;
+namespace AStar\Tests\Example\Graph;
 
-use JMGQ\AStar\Example\Graph\MyNode;
+use AStar\Example\Graph\MyNode;
 
 class MyNodeTest extends \PHPUnit_Framework_TestCase
 {
@@ -37,7 +37,7 @@ class MyNodeTest extends \PHPUnit_Framework_TestCase
     {
         $sut = new MyNode(0, 0);
 
-        $this->assertInstanceOf('JMGQ\AStar\Node', $sut);
+        $this->assertInstanceOf('AStar\Node', $sut);
     }
 
     /**
@@ -82,7 +82,7 @@ class MyNodeTest extends \PHPUnit_Framework_TestCase
         $y = 5;
         $nodeID = $x . 'x' . $y;
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->once())
             ->method('getID')
             ->will($this->returnValue($nodeID));
@@ -102,7 +102,7 @@ class MyNodeTest extends \PHPUnit_Framework_TestCase
     {
         $nodeID = 'foo';
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->once())
             ->method('getID')
             ->will($this->returnValue($nodeID));

@@ -1,8 +1,8 @@
 <?php
 
-namespace JMGQ\AStar\Tests\Example\Terrain;
+namespace AStar\Tests\Example\Terrain;
 
-use JMGQ\AStar\Example\Terrain\MyNode;
+use AStar\Example\Terrain\MyNode;
 
 class MyNodeTest extends \PHPUnit_Framework_TestCase
 {
@@ -34,7 +34,7 @@ class MyNodeTest extends \PHPUnit_Framework_TestCase
     {
         $sut = new MyNode(0, 0);
 
-        $this->assertInstanceOf('JMGQ\AStar\Node', $sut);
+        $this->assertInstanceOf('AStar\Node', $sut);
     }
 
     /**
@@ -79,7 +79,7 @@ class MyNodeTest extends \PHPUnit_Framework_TestCase
         $column = 5;
         $nodeID = $row . 'x' . $column;
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->once())
             ->method('getID')
             ->will($this->returnValue($nodeID));
@@ -99,7 +99,7 @@ class MyNodeTest extends \PHPUnit_Framework_TestCase
     {
         $nodeID = 'foo';
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->once())
             ->method('getID')
             ->will($this->returnValue($nodeID));

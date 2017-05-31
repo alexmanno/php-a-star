@@ -1,6 +1,6 @@
 <?php
 
-namespace JMGQ\AStar;
+namespace AStar;
 
 abstract class Algorithm
 {
@@ -15,28 +15,31 @@ abstract class Algorithm
 
     /**
      * @param Node $node
+     *
      * @return Node[]
      */
-    abstract public function generateAdjacentNodes(Node $node);
+    abstract public function generateAdjacentNodes(Node $node): array;
 
     /**
      * @param Node $node
      * @param Node $adjacent
-     * @return integer | float
+     *
+     * @return int | float
      */
-    abstract public function calculateRealCost(Node $node, Node $adjacent);
+    abstract public function calculateRealCost(Node $node, Node $adjacent): float;
 
     /**
      * @param Node $start
      * @param Node $end
-     * @return integer | float
+     *
+     * @return int | float
      */
-    abstract public function calculateEstimatedCost(Node $start, Node $end);
+    abstract public function calculateEstimatedCost(Node $start, Node $end): float;
 
     /**
      * @return NodeList
      */
-    public function getOpenList()
+    public function getOpenList(): NodeList
     {
         return $this->openList;
     }
@@ -44,15 +47,15 @@ abstract class Algorithm
     /**
      * @return NodeList
      */
-    public function getClosedList()
+    public function getClosedList(): NodeList
     {
         return $this->closedList;
     }
 
     /**
-     * Sets the algorithm to its initial state
+     * Sets the algorithm to its initial state.
      */
-    public function clear()
+    public function clear(): void
     {
         $this->getOpenList()->clear();
         $this->getClosedList()->clear();
@@ -61,11 +64,12 @@ abstract class Algorithm
     /**
      * @param Node $start
      * @param Node $goal
+     *
      * @return Node[]
      */
-    public function run(Node $start, Node $goal)
+    public function run(Node $start, Node $goal): array
     {
-        $path = array();
+        $path = [];
 
         $this->clear();
 
@@ -116,7 +120,7 @@ abstract class Algorithm
 
     private function generatePathFromStartNodeTo(Node $node)
     {
-        $path = array();
+        $path = [];
 
         $currentNode = $node;
 

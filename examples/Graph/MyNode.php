@@ -1,9 +1,9 @@
 <?php
 
-namespace JMGQ\AStar\Example\Graph;
+namespace AStar\Example\Graph;
 
-use JMGQ\AStar\AbstractNode;
-use JMGQ\AStar\Node;
+use AStar\AbstractNode;
+use AStar\Node;
 
 class MyNode extends AbstractNode
 {

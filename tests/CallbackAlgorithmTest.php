@@ -1,8 +1,8 @@
 <?php
 
-namespace JMGQ\AStar\Tests;
+namespace AStar\Tests;
 
-use JMGQ\AStar\CallbackAlgorithm;
+use AStar\CallbackAlgorithm;
 
 class CallbackAlgorithmTest extends \PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class CallbackAlgorithmTest extends \PHPUnit_Framework_TestCase
             null
         );
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
 
         $this->assertSame($this->adjacentNodesFunction(), $sut->generateAdjacentNodes($node));
     }
@@ -29,7 +29,7 @@ class CallbackAlgorithmTest extends \PHPUnit_Framework_TestCase
             null
         );
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
 
         $this->assertSame($this->realCostFunction(), $sut->calculateRealCost($node, $node));
     }
@@ -43,7 +43,7 @@ class CallbackAlgorithmTest extends \PHPUnit_Framework_TestCase
             'estimatedCostFunction'
         );
 
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
 
         $this->assertSame($this->estimatedCostFunction(), $sut->calculateEstimatedCost($node, $node));
     }

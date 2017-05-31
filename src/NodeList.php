@@ -1,6 +1,6 @@
 <?php
 
-namespace JMGQ\AStar;
+namespace AStar;
 
 class NodeList implements \IteratorAggregate
 {

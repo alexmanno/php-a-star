@@ -1,6 +1,6 @@
 <?php
 
-namespace JMGQ\AStar\Example\Graph;
+namespace AStar\Example\Graph;
 
 class SequencePrinter
 {

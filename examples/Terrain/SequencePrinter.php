@@ -1,6 +1,6 @@
 <?php
 
-namespace JMGQ\AStar\Example\Terrain;
+namespace AStar\Example\Terrain;
 
 class SequencePrinter
 {

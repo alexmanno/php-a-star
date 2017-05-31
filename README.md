@@ -31,7 +31,7 @@ Usage
 -----
 1. Create a class that implements the `Node` interface. The easiest option is to create a class that extends `AbstractNode`. It requires to implement the `getID` method:
     ```php
-    use JMGQ\AStar\AbstractNode;
+    use AStar\AbstractNode;
     
     class MyNode extends AbstractNode
     {
@@ -48,7 +48,7 @@ Usage
 
 2. Extend the `AStar` class, which requires to implement its three abstract methods:
     ```php
-    use JMGQ\AStar\AStar;
+    use AStar\AStar;
     
     class MyAStar extends AStar
     {

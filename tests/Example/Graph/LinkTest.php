@@ -1,8 +1,8 @@
 <?php
 
-namespace JMGQ\AStar\Tests\Example\Graph;
+namespace AStar\Tests\Example\Graph;
 
-use JMGQ\AStar\Example\Graph\Link;
+use AStar\Example\Graph\Link;
 
 class LinkTest extends \PHPUnit_Framework_TestCase
 {
@@ -37,10 +37,10 @@ class LinkTest extends \PHPUnit_Framework_TestCase
     {
         $expectedDistance = (float) $distance;
 
-        $source = $this->getMockBuilder('JMGQ\AStar\Example\Graph\MyNode')
+        $source = $this->getMockBuilder('AStar\Example\Graph\MyNode')
             ->disableOriginalConstructor()
             ->getMock();
-        $destination = $this->getMockBuilder('JMGQ\AStar\Example\Graph\MyNode')
+        $destination = $this->getMockBuilder('AStar\Example\Graph\MyNode')
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -58,10 +58,10 @@ class LinkTest extends \PHPUnit_Framework_TestCase
      */
     public function testShouldNotSetInvalidDistance($distance)
     {
-        $source = $this->getMockBuilder('JMGQ\AStar\Example\Graph\MyNode')
+        $source = $this->getMockBuilder('AStar\Example\Graph\MyNode')
             ->disableOriginalConstructor()
             ->getMock();
-        $destination = $this->getMockBuilder('JMGQ\AStar\Example\Graph\MyNode')
+        $destination = $this->getMockBuilder('AStar\Example\Graph\MyNode')
             ->disableOriginalConstructor()
             ->getMock();
 

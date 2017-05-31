@@ -1,10 +1,10 @@
 <?php
 
-namespace JMGQ\AStar\Tests\Example\Terrain;
+namespace AStar\Tests\Example\Terrain;
 
-use JMGQ\AStar\Example\Terrain\MyNode;
-use JMGQ\AStar\Example\Terrain\SequencePrinter;
-use JMGQ\AStar\Example\Terrain\TerrainCost;
+use AStar\Example\Terrain\MyNode;
+use AStar\Example\Terrain\SequencePrinter;
+use AStar\Example\Terrain\TerrainCost;
 
 class SequencePrinterTest extends \PHPUnit_Framework_TestCase
 {

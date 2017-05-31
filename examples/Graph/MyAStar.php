@@ -1,9 +1,9 @@
 <?php
 
-namespace JMGQ\AStar\Example\Graph;
+namespace AStar\Example\Graph;
 
-use JMGQ\AStar\AStar;
-use JMGQ\AStar\Node;
+use AStar\AStar;
+use AStar\Node;
 
 class MyAStar extends AStar
 {

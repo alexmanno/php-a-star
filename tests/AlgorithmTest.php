@@ -1,27 +1,27 @@
 <?php
 
-namespace JMGQ\AStar\Tests;
+namespace AStar\Tests;
 
 class AlgorithmTest extends BaseAStarTest
 {
     public function setUp()
     {
-        $this->sut = $this->getMockForAbstractClass('JMGQ\AStar\Algorithm');
+        $this->sut = $this->getMockForAbstractClass('AStar\Algorithm');
     }
 
     public function testOpenListShouldBeANodeList()
     {
-        $this->assertInstanceOf('JMGQ\AStar\NodeList', $this->sut->getOpenList());
+        $this->assertInstanceOf('AStar\NodeList', $this->sut->getOpenList());
     }
 
     public function testClosedListShouldBeANodeList()
     {
-        $this->assertInstanceOf('JMGQ\AStar\NodeList', $this->sut->getClosedList());
+        $this->assertInstanceOf('AStar\NodeList', $this->sut->getClosedList());
     }
 
     public function testShouldResetToCleanState()
     {
-        $node = $this->getMock('JMGQ\AStar\Node');
+        $node = $this->getMock('AStar\Node');
         $node->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('someUniqueID'));

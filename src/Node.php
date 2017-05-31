@@ -1,6 +1,6 @@
 <?php
 
-namespace JMGQ\AStar;
+namespace AStar;
 
 interface Node
 {

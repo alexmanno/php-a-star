@@ -1,6 +1,6 @@
 <?php
 
-namespace JMGQ\AStar\Tests;
+namespace AStar\Tests;
 
 abstract class BaseAStarTest extends \PHPUnit_Framework_TestCase
 {
@@ -10,12 +10,12 @@ abstract class BaseAStarTest extends \PHPUnit_Framework_TestCase
     {
         $uniqueID = 'someUniqueID';
 
-        $startNode = $this->getMock('JMGQ\AStar\Node');
+        $startNode = $this->getMock('AStar\Node');
         $startNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue($uniqueID));
 
-        $goalNode = $this->getMock('JMGQ\AStar\Node');
+        $goalNode = $this->getMock('AStar\Node');
         $goalNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue($uniqueID));
@@ -29,12 +29,12 @@ abstract class BaseAStarTest extends \PHPUnit_Framework_TestCase
 
     public function testShouldReturnEmptyPathIfSolutionNotFound()
     {
-        $startNode = $this->getMock('JMGQ\AStar\Node');
+        $startNode = $this->getMock('AStar\Node');
         $startNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('startNodeID'));
 
-        $unreachableGoalNode = $this->getMock('JMGQ\AStar\Node');
+        $unreachableGoalNode = $this->getMock('AStar\Node');
         $unreachableGoalNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('unreachableGoalNode'));
@@ -50,17 +50,17 @@ abstract class BaseAStarTest extends \PHPUnit_Framework_TestCase
 
     public function testSimplePath()
     {
-        $startNode = $this->getMockForAbstractClass('JMGQ\AStar\AbstractNode');
+        $startNode = $this->getMockForAbstractClass('AStar\AbstractNode');
         $startNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('startNode'));
 
-        $goalNode = $this->getMockForAbstractClass('JMGQ\AStar\AbstractNode');
+        $goalNode = $this->getMockForAbstractClass('AStar\AbstractNode');
         $goalNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('goalNode'));
 
-        $otherNode = $this->getMockForAbstractClass('JMGQ\AStar\AbstractNode');
+        $otherNode = $this->getMockForAbstractClass('AStar\AbstractNode');
         $otherNode->expects($this->any())
             ->method('getID')
             ->will($this->returnValue('otherNode'));
