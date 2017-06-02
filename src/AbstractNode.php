@@ -5,13 +5,12 @@ namespace AStar;
 abstract class AbstractNode implements Node
 {
     private $parent;
-    private $children = array();
-
+    private $children = [];
     private $gScore;
     private $hScore;
 
     /**
-     * @inheritdoc
+     * @param Node $parent
      */
     public function setParent(Node $parent)
     {
@@ -19,15 +18,16 @@ abstract class AbstractNode implements Node
     }
 
     /**
-     * @inheritdoc
+     * @return Node
      */
-    public function getParent()
+    public function getParent(): Node
     {
         return $this->parent;
     }
 
     /**
      * @deprecated
+     *
      * @param Node $child
      */
     public function addChild(Node $child)
@@ -41,21 +41,21 @@ abstract class AbstractNode implements Node
      * @deprecated
      * @return Node[]
      */
-    public function getChildren()
+    public function getChildren(): array
     {
         return $this->children;
     }
 
     /**
-     * @inheritdoc
+     * @return float|int
      */
-    public function getF()
+    public function getF(): float
     {
         return $this->getG() + $this->getH();
     }
 
     /**
-     * @inheritdoc
+     * @param float|int $score
      */
     public function setG($score)
     {
@@ -67,15 +67,15 @@ abstract class AbstractNode implements Node
     }
 
     /**
-     * @inheritdoc
+     * @return float
      */
-    public function getG()
+    public function getG(): float
     {
         return $this->gScore;
     }
 
     /**
-     * @inheritdoc
+     * @param float|int $score
      */
     public function setH($score)
     {
@@ -87,9 +87,9 @@ abstract class AbstractNode implements Node
     }
 
     /**
-     * @inheritdoc
+     * @return float
      */
-    public function getH()
+    public function getH(): float
     {
         return $this->hScore;
     }

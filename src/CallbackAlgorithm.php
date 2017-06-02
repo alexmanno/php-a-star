@@ -21,9 +21,10 @@ class CallbackAlgorithm extends Algorithm
 
     /**
      * @param Node $node
+     *
      * @return Node[]
      */
-    public function generateAdjacentNodes(Node $node)
+    public function generateAdjacentNodes(Node $node): array
     {
         return call_user_func_array(array($this->object, $this->adjacentNodesCallback), array($node));
     }
@@ -31,9 +32,10 @@ class CallbackAlgorithm extends Algorithm
     /**
      * @param Node $node
      * @param Node $adjacent
+     *
      * @return integer | float
      */
-    public function calculateRealCost(Node $node, Node $adjacent)
+    public function calculateRealCost(Node $node, Node $adjacent): float
     {
         return call_user_func_array(array($this->object, $this->realCostCallback), array($node, $adjacent));
     }
@@ -41,9 +43,10 @@ class CallbackAlgorithm extends Algorithm
     /**
      * @param Node $start
      * @param Node $end
+     *
      * @return integer | float
      */
-    public function calculateEstimatedCost(Node $start, Node $end)
+    public function calculateEstimatedCost(Node $start, Node $end): float
     {
         return call_user_func_array(array($this->object, $this->estimatedCostCallback), array($start, $end));
     }

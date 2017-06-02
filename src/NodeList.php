@@ -2,16 +2,18 @@
 
 namespace AStar;
 
+use ArrayIterator;
+
 class NodeList implements \IteratorAggregate
 {
     private $nodeList = array();
 
     /**
-     * @inheritdoc
+     * @return ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): ArrayIterator
     {
-        return new \ArrayIterator($this->nodeList);
+        return new ArrayIterator($this->nodeList);
     }
 
     /**
@@ -25,16 +27,17 @@ class NodeList implements \IteratorAggregate
     /**
      * @return bool
      */
-    public function isEmpty()
+    public function isEmpty(): bool
     {
         return empty($this->nodeList);
     }
 
     /**
      * @param Node $node
+     *
      * @return bool
      */
-    public function contains(Node $node)
+    public function contains(Node $node): bool
     {
         return isset($this->nodeList[$node->getID()]);
     }
@@ -42,7 +45,7 @@ class NodeList implements \IteratorAggregate
     /**
      * @return Node | null
      */
-    public function extractBest()
+    public function extractBest(): ?Node
     {
         $bestNode = null;
 
@@ -69,9 +72,10 @@ class NodeList implements \IteratorAggregate
 
     /**
      * @param Node $node
+     *
      * @return Node | null
      */
-    public function get(Node $node)
+    public function get(Node $node): ?Node
     {
         if ($this->contains($node)) {
             return $this->nodeList[$node->getID()];

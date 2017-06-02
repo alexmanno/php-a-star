@@ -118,7 +118,12 @@ abstract class Algorithm
         return $path;
     }
 
-    private function generatePathFromStartNodeTo(Node $node)
+    /**
+     * @param Node $node
+     *
+     * @return array
+     */
+    private function generatePathFromStartNodeTo(Node $node): array
     {
         $path = [];
 
@@ -133,7 +138,13 @@ abstract class Algorithm
         return $path;
     }
 
-    private function computeAdjacentNodes(Node $node, Node $goal)
+    /**
+     * @param Node $node
+     * @param Node $goal
+     *
+     * @return array|Node[]
+     */
+    private function computeAdjacentNodes(Node $node, Node $goal): array
     {
         $nodes = $this->generateAdjacentNodes($node);
 
